@@ -17,6 +17,42 @@ function createStore(reducer) {
   function setState(state) {
     currentState = state;
 
+// store
+
+function createStore(reducer) {
+  var currentState;
+  var currentListener;
+
+  function dispatch(action) {
+    console.log('来了一个action, action类型为', action)
+    setState(reducer(currentState, action))
+  }
+
+  function getState() {
+    return currentState
+  }
+  
+  function setState(state) {
+    currentState = state;
+
+// store
+
+function createStore(reducer) {
+  var currentState;
+  var currentListener;
+
+  function dispatch(action) {
+    console.log('来了一个action, action类型为', action)
+    setState(reducer(currentState, action))
+  }
+
+  function getState() {
+    return currentState
+  }
+  
+  function setState(state) {
+    currentState = state;
+
     if (currentListener) {
       currentListener(getState())
       console.log('状态发生变化，通知视图', currentListener)
