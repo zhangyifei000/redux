@@ -22,7 +22,7 @@
 
     到此为止我们可使用下面的代码来实现上面所说的功能
 
-    ```
+```
     // store
 
 function createStore(reducer) {
@@ -99,6 +99,6 @@ store.dispatch(addTodo('新添加了一条信息'))
 store.unSubscribe()
 
 store.dispatch(addTodo('在添加一条信息'))
-    ```
+```
 
 很多根据flux模式设计的状态管理框架思路，其实都是差不多的。另外说一定函数式编程思想还是很不错的。
